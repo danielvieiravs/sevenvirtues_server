@@ -13,3 +13,9 @@ docker-compose -f docker-compose.prod.yml logs -f
 
 # Container
 docker exec -t -i sevenvirtues_server_web_1 sh
+
+# Aws
+ssh -i djangoletsencrypt.pem ubuntu@34.221.31.21
+
+# Aws Rds
+djangoec2.cp6iqybffg7y.us-west-2.rds.amazonaws.com
