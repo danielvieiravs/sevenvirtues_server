@@ -1,6 +1,7 @@
 # Dev
-docker-compose -f docker-compose.dev.yml down
-docker-compose -f docker-compose.dev.yml build
+docker-compose -f docker-compose.dev.yml down -v
+docker-compose -f docker-compose.dev.yml up --build
+docker-compose -f docker-compose.dev.yml exec web python manage.py migrate --noinput
 docker-compose -f docker-compose.dev.yml up
 
 # Prod
@@ -11,4 +12,4 @@ docker-compose -f docker-compose.prod.yml exec web python manage.py collectstati
 docker-compose -f docker-compose.prod.yml logs -f
 
 # Container
-docker exec -t -i b87ef4726113 sh
+docker exec -t -i sevenvirtues_server_web_1 sh

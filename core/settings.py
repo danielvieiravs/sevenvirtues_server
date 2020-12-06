@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'api',
     'ratings',
     'tracking',
     'users',
@@ -129,4 +130,9 @@ USE_TZ = True
 STATIC_URL = "/staticfiles/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
+MEDIA_URL = "/mediafiles/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "mediafiles")
+
 AUTH_USER_MODEL = 'users.SevenVirtuesUsers'
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

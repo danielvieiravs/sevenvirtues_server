@@ -45,6 +45,7 @@ ENV HOME=/home/server
 ENV SERVER_HOME=/home/server/web
 RUN mkdir $SERVER_HOME
 RUN mkdir $SERVER_HOME/staticfiles
+RUN mkdir $SERVER_HOME/mediafiles
 WORKDIR $SERVER_HOME
 
 # install dependencies
